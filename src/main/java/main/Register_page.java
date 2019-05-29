@@ -12,13 +12,19 @@ import javax.swing.JTextField;
 
 public class Register_page {
 	public boolean calltoOpenHome(String name,String username,String conatctnumber, String password,String email) {
-			//check if name == string
+			
+		//check if name == string
 		//check if user name == string
 		//check if contact number == number
 		//check if email is in email format
 		//only then open Home and return true
 		//else return false
 		 //write code to open Home window(object)
+		if(name.matches("[a-z A-Z]+") == true  && username.matches("[a-z 0-9 A-Z]+") == true && conatctnumber.matches("[0-9]+") == true)
+		{
+			Home obj = new Home();  
+			return true;
+		}
 		return false;
 	}
 	public JFrame f;
